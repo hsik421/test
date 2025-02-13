@@ -1,9 +1,9 @@
-import 'package:untitled/data/datasource/timeDataSource.dart';
-import 'package:untitled/data/model/timeModel.dart';
+import 'package:untitled/data/datasource/bitgetDataSource.dart';
 
-class TimeRepository{
-  final TimeDataSource _timeDataSource = TimeDataSource();
-  Future<String> load() async{
-    return _timeDataSource.load();
+class TimeRepository {
+  final BitgetDataSource _bitgetDataSource = BitgetDataSource();
+
+  Future<String> load() async {
+    return _bitgetDataSource.getServerTime();
   }
 }
